@@ -1,1 +1,64 @@
-hi
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>俄羅斯方塊遊戲</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="game-wrapper">
+            <div class="sidebar">
+                <div class="info-box">
+                    <h1>俄羅斯方塊</h1>
+                    <div class="info-item">
+                        <span class="label">得分：</span>
+                        <span id="score" class="value">0</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="label">等級：</span>
+                        <span id="level" class="value">1</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="label">消除行數：</span>
+                        <span id="lines" class="value">0</span>
+                    </div>
+                </div>
+
+                <div class="next-box">
+                    <h3>下一個方塊</h3>
+                    <canvas id="nextCanvas" width="120" height="120"></canvas>
+                </div>
+
+                <div class="controls">
+                    <button id="startBtn" class="btn btn-primary">開始遊戲</button>
+                    <button id="pauseBtn" class="btn btn-secondary">暫停</button>
+                    <button id="resetBtn" class="btn btn-secondary">重新開始</button>
+                </div>
+
+                <div class="instructions">
+                    <h3>操作說明</h3>
+                    <ul>
+                        <li>⬅️ 左箭頭：向左移動</li>
+                        <li>➡️ 右箭頭：向右移動</li>
+                        <li>⬇️ 下箭頭：加速下落</li>
+                        <li>⬆️ 上箭頭：旋轉方塊</li>
+                        <li>空格：快速下落</li>
+                    </ul>
+                </div>
+
+                <div class="game-status">
+                    <p id="status"></p>
+                </div>
+            </div>
+
+            <div class="game-board">
+                <canvas id="gameCanvas" width="200" height="400"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <script src="tetris.js"></script>
+</body>
+</html>
